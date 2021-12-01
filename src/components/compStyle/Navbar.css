@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Ubuntu", sans-serif; */
+}
+
+.navbar {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s;
+  background-color: #212529;
+}
+
+/* Logo styling */
+.logo {
+  margin: 0 0 0 1rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.logo a:hover {
+  color: white;
+}
+
+.logo a span {
+  color: tomato;
+}
+
+/* Nav-items styling */
+.nav-items {
+  display: flex;
+  margin: 10px 0;
+  margin-right: 20px;
+}
+
+.nav-items li {
+  list-style: none;
+}
+
+.nav-items li a {
+  display: inline-block;
+  padding: 7px;
+  margin-left: 17px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(12, 12, 12);
+  border: 2px solid white;
+}
+
+.nav-items li a:hover {
+  border-color: rgb(255, 255, 255);
+  background-color: white;
+  color: black;
+  /* color: tomato; */
+}
+
+.burger {
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+.burger .line {
+  height: 2px;
+  width: 70%;
+  background-color: white;
+  padding: 1px 0;
+  margin-top: 6px;
+}
+
+@media (max-width: 1170px) {
+  .logo a {
+    font-size: 2.3rem;
+  }
+  .nav-items li a {
+    padding: 5px;
+    margin-left: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 970px) {
+  .logo a {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  .navbar {
+    position: relative;
+    /* left: -1000px; */
+    transition: all 0.3s;
+    height: 80px;
+    transition: all 0.3s;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 6px;
+  }
+  .nav-items {
+    position: absolute;
+    top: 18px;
+    right: -1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #212529;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    transition: all 0.3s;
+    display: none;
+  }
+  .nav-items li a {
+    border-radius: 0;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: none;
+    margin: 10px 0;
+  }
+  .moveNav {
+    display: flex;
+    right: 0;
+  }
+}
